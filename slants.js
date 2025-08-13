@@ -44,8 +44,9 @@ function drawCircles(stillColour){
     //        ellipse(1.5*r+2*r*i, 15+40*r, 10, 10);
     //    }
     //}
+    let position = x;
     stroke(0);
-    ellipse(100, 100, 100, 100);
+    ellipse(x, 100, 100, 100);
 }
 
 //if stillColour is truthy, image will be black or white
