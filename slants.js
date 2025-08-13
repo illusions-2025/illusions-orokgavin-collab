@@ -47,9 +47,9 @@ function drawCircles(stillColour){
     for (let i=0; i < 16; i++) {
         for (let j=0; j < 6; j++) {
             if (stillColour) {
-                let colour = 255*(stillColour%2)
+                let colour = 255*(stillColour%2);
             } else {
-                let colour = 255*((i+j)%2)
+                let colour = 255*((i+j)%2);
             }
             stroke(colour);
             fill(colour);
