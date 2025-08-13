@@ -38,12 +38,13 @@ function setup() {
 //if stillColour is truthy, image will be black or white
 //but not both (ie no illusion)
 function drawCircles(stillColour){
-    r = 27.777777
-    for (i=0; i < 16; i++) {
-        for (j=0; j < 6; j++) {
-            ellipse(1.5*r+2*r, 15+40*r, 10, 10);
-        }
-    }
+    //r = 27.777777
+    //for (i=0; i < 16; i++) {
+    //    for (j=0; j < 6; j++) {
+    //        ellipse(1.5*r+2*r*i, 15+40*r, 10, 10);
+    //    }
+    //}
+    ellipse(100, 100, 100, 100);
 }
 
 //if stillColour is truthy, image will be black or white
