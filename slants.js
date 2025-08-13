@@ -46,7 +46,11 @@ function drawCircles(stillColour){
     let y_spacing = (600 - 2*y_offset)/5;
     for (let i=0; i < 16; i++) {
         for (let j=0; j < 6; j++) {
-            let colour = 255*(i+j)%2;
+            if (stillColour) {
+                let colour = 255*(stillColour%2)
+            } else {
+                let colour = 255*((i+j)%2)
+            }
             stroke(colour);
             fill(colour);
             let x = x_offset + radius + i*circlewidth;
@@ -74,7 +78,7 @@ function drawLines(stillColour){
                 rect(x_offset + circlewidth*(i+1), y_offset + 5 + (circlewidth + y_spacing)*j, 20, 5);
                 rect(x_offset + circlewidth*(i+1), y_offset + circlewidth - 5 + (circlewidth + y_spacing)*j, 20, 5);
             } else {
-                first_colour = 255*(i+j)%2;
+                first_colour = 255*((i+j)%2);
                 stroke(first_colour);
                 fill(first_colour);
                 rect(x_offset + circlewidth*(i+1), y_offset + 5 + (circlewidth + y_spacing)*j, 20, 5);
