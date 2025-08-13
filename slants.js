@@ -46,10 +46,11 @@ function drawCircles(stillColour){
     let y_spacing = (600 - 2*y_offset)/5;
     for (let i=0; i < 16; i++) {
         for (let j=0; j < 6; j++) {
+            let colour = 0;
             if (stillColour) {
-                let colour = 255*(stillColour%2);
+                colour = 255*(stillColour%2);
             } else {
-                let colour = 255*((i+j)%2);
+                colour = 255*((i+j)%2);
             }
             stroke(colour);
             fill(colour);
