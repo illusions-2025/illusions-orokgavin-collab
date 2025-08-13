@@ -48,7 +48,7 @@ function drawCircles(stillColour){
         for (let j=0; j < 6; j++) {
             let x = x_offset + radius + i*circlewidth;
             let y = y_offset + radius + j*(circlewidth + y_spacing);
-            ellipse(x, y, radius, radius);
+            ellipse(x, y, circlewidth, circlewidth);
         }
     }
 }
