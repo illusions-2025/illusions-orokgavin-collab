@@ -46,6 +46,9 @@ function drawCircles(stillColour){
     let y_spacing = (600 - 2*y_offset)/5;
     for (let i=0; i < 16; i++) {
         for (let j=0; j < 6; j++) {
+            let colour = 255*(i+j)%2;
+            stroke(colour);
+            fill(colour);
             let x = x_offset + radius + i*circlewidth;
             let y = y_offset + radius + j*(circlewidth + y_spacing);
             ellipse(x, y, circlewidth, circlewidth);
@@ -56,7 +59,33 @@ function drawCircles(stillColour){
 //if stillColour is truthy, image will be black or white
 //but not both (ie no illusion)
 function drawLines(stillColour){
+    let x_offset = 100;
+    let linewidth = 1000 - 2*x_offset;
+    let circlewidth = linewidth/16;
+    let y_offset = 50;
+    let y_spacing = (600 - 2*y_offset)/5;
 
+    for (let i = 0; i < 15; i++) {
+        for (let j = 0; j < 6; j++) {
+            if (stillColour) {
+                colour = 255*(stillColour%2);
+                stroke(colour);
+                fill(colour);
+                rect(x_offset + circlewidth*(i+1), y_offset + 5 + (circlewidth + y_spacing)*j, 20, 5);
+                rect(x_offset + circlewidth*(i+1), y_offset + circlewidth - 5 + (circlewidth + y_spacing)*j, 20, 5);
+            } else {
+                first_colour = 255*(i+j)%2;
+                stroke(first_colour);
+                fill(first_colour);
+                rect(x_offset + circlewidth*(i+1), y_offset + 5 + (circlewidth + y_spacing)*j, 20, 5);
+                second_colour = 255*(i+j+1)%2;
+                stroke(second_colour);
+                fill(second_colour);
+                rect(x_offset + circlewidth*(i+1), y_offset + circlewidth - 5 + (circlewidth + y_spacing)*j, 20, 5);
+            }
+
+        }
+    }
 }
 //this function is called once every 60 seconds unless
 //the noLoop() function is called
