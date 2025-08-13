@@ -83,7 +83,7 @@ function drawLines(stillColour){
                 stroke(first_colour);
                 fill(first_colour);
                 rect(x_offset + circlewidth*(i+1), y_offset + 5 + (circlewidth + y_spacing)*j, 20, 5);
-                second_colour = 255*(i+j+1)%2;
+                second_colour = 255*((i+j+1)%2);
                 stroke(second_colour);
                 fill(second_colour);
                 rect(x_offset + circlewidth*(i+1), y_offset + circlewidth - 5 + (circlewidth + y_spacing)*j, 20, 5);
