@@ -44,6 +44,7 @@ function drawCircles(stillColour){
     //        ellipse(1.5*r+2*r*i, 15+40*r, 10, 10);
     //    }
     //}
+    stroke(0);
     ellipse(100, 100, 100, 100);
 }
 
